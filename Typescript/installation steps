@@ -1,0 +1,6 @@
+1. install node 
+2. install typescript
+
+3. type code in ts file
+4. compile using tsc filename.ts
+5. execute it on node using node filename.js
