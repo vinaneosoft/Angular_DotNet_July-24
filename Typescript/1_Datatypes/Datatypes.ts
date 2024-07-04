@@ -18,3 +18,29 @@ let companyName:string;
 companyName="Neosoft";
 console.log(typeof companyName);
 //companyName=0;
+
+let dcode:any;
+dcode=23;
+dcode="LD";
+
+let id:number | string;
+id="NS123";
+id=123
+//id=true;
+
+let ename="Poonam";  //string
+// ename=890;
+
+
+function test() {
+    console.log("test function");
+    return 0;
+}
+function test1():void {
+    console.log("test1 function");
+   // return 0;
+}
+function test2():number{
+    //return "hello";
+    return 78;
+}
