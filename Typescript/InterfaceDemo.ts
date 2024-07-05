@@ -1,3 +1,4 @@
+import { isStatement } from "typescript";
 
 interface Employee{
     // skeleton of variables
@@ -114,6 +115,3 @@ class R   extends P implements Q {
 
 }
 
-
-
-//extends, implements
