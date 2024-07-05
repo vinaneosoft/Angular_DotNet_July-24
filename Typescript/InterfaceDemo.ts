@@ -94,7 +94,6 @@ class XYZ implements C{
     demo(): void {
         throw new Error("Method not implemented.");
     }
-    
 }
 
 
@@ -115,3 +114,6 @@ class R   extends P implements Q {
 
 }
 
+
+
+//extends, implements

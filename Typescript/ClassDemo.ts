@@ -1,6 +1,10 @@
 // class name : capital case 
 // instance variables, instance methods : camel case
 // static variables : upper case
+
+let companyName="Neosoft";
+
+
 class BankAccount{
     accountNumber=0;
     accountBalance=0

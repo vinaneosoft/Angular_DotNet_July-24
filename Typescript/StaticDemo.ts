@@ -32,7 +32,7 @@ export class BankAccount{
     }
     static getCounter():number{
         //inside static method "this" is typeof BankAccount
-        return this.counter;
+        return BankAccount.counter;
     }
 }
 console.log(BankAccount.getCounter());
