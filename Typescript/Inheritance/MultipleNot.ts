@@ -14,7 +14,8 @@ class Mother{
     }
 } */
 // multiple inheritance via class in not supported
-
+/* if multiple interfaces contain exact identical methods and if those interfaces are getting
+implemented then allowed but if same methods have different signature then error occurs  */
 interface Father{
     dream():string;
     hobbies():string;
