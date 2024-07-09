@@ -13,10 +13,10 @@ export class LoginComponent {
  // service object is automatically injected
 username="";
 password="";
+flag=false;
  constructor(public userService:UserService){ // 1. DI
  }
   testLogin(){
-    const flag=this.userService.login(this.username, this.password); // 2. call function 
+    this.flag=this.userService.login(this.username, this.password); // 2. call function 
   }
-
 }
