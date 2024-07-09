@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class LearningComponent {
 
     chapterName="Data Binding" // data
+
+    test():void{
+      console.log(this.chapterName);
+    }
 }
