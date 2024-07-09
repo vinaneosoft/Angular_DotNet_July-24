@@ -14,6 +14,8 @@ export class LoginComponent {
 username="";
 password="";
 flag=false;
+inputType="password";
+passCheck=false;;
  constructor(public userService:UserService){ // 1. DI
  }
   testLogin(){

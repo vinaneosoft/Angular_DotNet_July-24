@@ -6,8 +6,16 @@
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" [(ngModel)]="password" >
+          <input [type]="inputType" class="form-control" id="password" [(ngModel)]="password" >
+        </div>
+        <div>
+          <input type="checkbox"  id="showp" [(ngModel)]="passCheck" (change)="passCheck?inputType='text':inputType='password'"><label for="showp">show password</label>
         </div>
         <button type="button" class="btn btn-primary" (click)="testLogin()">Submit</button>  
       <p>{{flag}}</p>
 </div>
+
+<!-- string interpolation {{ }}
+ 2 way data binding [(ngModel)]
+ event binding ()
+ attribute binding []-->
