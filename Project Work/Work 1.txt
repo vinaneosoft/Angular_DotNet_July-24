@@ -1,0 +1,5 @@
+Select Entity for crud project
+Create new Mini project example (EmployeeManagement, StudentManagement)
+
+Add HeaderComponent, FooterComponent and Design using bootstrap
+
