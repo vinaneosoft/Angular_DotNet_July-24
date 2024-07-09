@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title="BOOK LIBRARY"
+  title="BOOK CRUD OPERATIONS"
  
 }
