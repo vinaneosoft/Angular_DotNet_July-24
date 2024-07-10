@@ -71,7 +71,20 @@
     <!-- arrange books vertically in table. paste table code in chatbox-->
     <table class="table table-bordered">
         <tbody>
-             <tr *ngFor="let book of bookNames"><td>{{book}}</td></tr>
+             <tr *ngFor="let book of bookNames; let index=index; let odd=odd; let even=even">
+                <td>{{book}}</td>
+                <td>{{index}}</td>
+                <td>{{odd}}</td>
+                <td>{{even}}</td>
+            </tr>
+        </tbody>
+     </table>
+     <h6>Books from odd indexes</h6>
+     <table class="table table-bordered">
+        <tbody>
+             <tr *ngFor="let book of bookNames; let index=index; let odd=odd">
+                <td *ngIf="odd">{{book}}</td>
+            </tr>
         </tbody>
      </table>
 </div>
