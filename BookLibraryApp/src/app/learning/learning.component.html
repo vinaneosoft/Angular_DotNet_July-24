@@ -4,3 +4,10 @@
     <label for="chapter">Enter Chapter Name :</label>
     <input id="chapter" type="text" [(ngModel)]="chapterName" (keyup)="test()">
 </div>
+<div>
+    <h6>ADDITION</h6>
+    <!-- template ref variables must be unique through out the project-->
+    <input type="number" placeholder="number 1" #inputnode1>+
+    <input type="number" placeholder="number 2" #inputnode2>=<b>{{addResult}}</b>
+    <button type="button" (click)="addNums(inputnode1.value,inputnode2.value)">ADD</button>
+</div>

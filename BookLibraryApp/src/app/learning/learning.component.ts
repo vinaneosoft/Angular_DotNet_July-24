@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LearningComponent {
     chapterName="Data Binding" // data
-
+    addResult=0;
     constructor(){
       setTimeout(()=>{
         this.chapterName="1 Way and 2 Way Data Binding"
@@ -19,5 +19,12 @@ export class LearningComponent {
     }
     test():void{
       console.log(this.chapterName);
+    }
+    addNums(num1:any,num2:any){
+      console.log(num1);
+      console.log(typeof num1);
+      console.log(num2);
+      console.log(typeof num2);
+      this.addResult=parseFloat(num1)+parseFloat(num2);
     }
 }

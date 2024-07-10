@@ -15,7 +15,8 @@ username="";
 password="";
 flag=false;
 inputType="password";
-passCheck=false;;
+passCheck=false;
+userTypes=['admin', 'user']
  constructor(public userService:UserService){ // 1. DI
  }
   testLogin(){

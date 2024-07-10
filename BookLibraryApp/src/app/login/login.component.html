@@ -1,5 +1,12 @@
 
 <div class="w-50">
+      <div class="mb-3">
+        <label for="usertype">Select Type:</label>
+        <select id="usertype" class="form-select" >
+          <!-- apply ngFor on that element, that u want to repeat-->
+          <option [value]="utype" *ngFor="let utype of userTypes">{{utype | uppercase}}</option>
+        </select>
+      </div>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input type="text" class="form-control" id="username" [(ngModel)]="username" > 
