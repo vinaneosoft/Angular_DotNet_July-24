@@ -57,3 +57,21 @@
         </ng-template>
     </section>
 </div>
+<app-login *ngIf="false"></app-login>
+<hr>
+<div>
+    <h5>Book Names </h5>
+    <section>{{bookNames}}</section>
+     <!-- apply ngFor on that element, that u want to repeat-->
+    <table class="table table-bordered">
+       <tbody>
+            <tr><td *ngFor="let book of bookNames">{{book}}</td></tr>
+       </tbody>
+    </table>
+    <!-- arrange books vertically in table. paste table code in chatbox-->
+    <table class="table table-bordered">
+        <tbody>
+             <tr *ngFor="let book of bookNames"><td>{{book}}</td></tr>
+        </tbody>
+     </table>
+</div>
