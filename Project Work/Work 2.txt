@@ -1,0 +1,3 @@
+Design BookInputComponent for session project using bootstrap (id, name , price, confirm price, shortDescription, author, publish date )
+
+Design EntityInputComponent for your own project ( depends on your entity)
