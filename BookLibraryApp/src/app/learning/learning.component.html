@@ -11,3 +11,20 @@
     <input type="number" placeholder="number 2" #inputnode2>=<b>{{addResult}}</b>
     <button type="button" (click)="addNums(inputnode1.value,inputnode2.value)">ADD</button>
 </div>
+<hr>
+<div>
+    <h6>Voter Application</h6>
+    <label>Enter your age:</label>
+    <input type="number" [(ngModel)]="age" placeholder="Enter age">
+    <section>
+        <h6>If logic</h6>
+        <p *ngIf="age>=18">
+            Welcome!!!!! You are allowed for voting
+        </p>
+        <p *ngIf="age<18"> 
+            Sorry!!!! You are not allowed for voting
+        </p>
+    </section>
+
+
+</div>

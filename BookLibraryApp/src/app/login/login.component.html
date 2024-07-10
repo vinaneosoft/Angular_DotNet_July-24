@@ -4,6 +4,7 @@
         <label for="usertype">Select Type:</label>
         <select id="usertype" class="form-select" >
           <!-- apply ngFor on that element, that u want to repeat-->
+           <!-- directives are markup on the DOM-->
           <option [value]="utype" *ngFor="let utype of userTypes">{{utype | uppercase}}</option>
         </select>
       </div>
