@@ -4,7 +4,7 @@
     <label for="chapter">Enter Chapter Name :</label>
     <input id="chapter" type="text" [(ngModel)]="chapterName" (keyup)="test()">
 </div>
-<div>
+<div #additionblock (mouseover)="accessTemplate(additionblock)">
     <h6>ADDITION</h6>
     <!-- template ref variables must be unique through out the project-->
     <input type="number" placeholder="number 1" #inputnode1>+

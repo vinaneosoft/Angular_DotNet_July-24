@@ -27,4 +27,10 @@ export class LearningComponent {
       console.log(typeof num2);
       this.addResult=parseFloat(num1)+parseFloat(num2);
     }
+    accessTemplate(template:any){
+      console.log(template);
+      console.log(typeof template);
+      console.log(template.innerText);
+      console.log(template.children);
+    }
 }
