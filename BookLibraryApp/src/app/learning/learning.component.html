@@ -40,4 +40,20 @@
             </p>       
         </ng-template>
     </section>
+
+    <section>
+        <h6>If then else logic</h6>
+         <!-- put if on element, where u want to just check the condition-->
+        <b *ngIf="age>=18 then thenpart; else elseblock"></b> <!-- if then else : it will not be a part of DOM-->
+        <ng-template #thenpart>
+            <p>
+                Welcome!!!!! You are allowed for voting
+            </p>
+        </ng-template>
+        <ng-template #elseblock>
+            <p> 
+                Sorry!!!! You are not allowed for voting
+            </p>
+        </ng-template>
+    </section>
 </div>
