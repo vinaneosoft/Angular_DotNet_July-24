@@ -12,6 +12,7 @@ export class BooksComponent {
     width:"300px"
   }
 
+  tableDesignclasses=["table-info" ,"table", "table-hover" ]
 
   books:TechnicalBook[]=[
     new TechnicalBook("1","Learn Java", "Marlyn Dis", 560.79, new Date("2 June 2005"), "this is java book"),
