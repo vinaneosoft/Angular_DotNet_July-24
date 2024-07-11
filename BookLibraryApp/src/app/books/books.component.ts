@@ -8,6 +8,11 @@ import { TechnicalBook } from '../myclasses/technical-book';
 })
 export class BooksComponent {
 
+  cardStyle={
+    width:"300px"
+  }
+
+
   books:TechnicalBook[]=[
     new TechnicalBook("1","Learn Java", "Marlyn Dis", 560.79, new Date("2 June 2005"), "this is java book"),
     new TechnicalBook("3","Basisc of Java", "Preesh kumar", 760.3, new Date("12 June 2005"), "this is java book"),
