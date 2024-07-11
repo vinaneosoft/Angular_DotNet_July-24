@@ -1,0 +1,2 @@
+Design card for ur entity of project. All details must be visible properly in card
+Class -> Array -> Card
