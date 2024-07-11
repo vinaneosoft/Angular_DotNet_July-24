@@ -15,7 +15,8 @@
     </tbody>
 </table>
 <hr>
-<div class="d-flex flex-wrap">
+
+<div [ngClass]="cardDesign">
     <div class="card" [ngStyle]="cardStyle" *ngFor="let book of books">
         <h5 class="card-title">{{book.id}}</h5>
         <img [src]="book.bookImage" class="card-img-top" alt="...">
