@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LearningComponent } from './learning/learning.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { BooksComponent } from './books/books.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     NavbarComponent,
     LearningComponent,
-    LoginComponent
+    LoginComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,1 @@
+in standalone component, ngSwitch not working , CommonModule is not bydefault available

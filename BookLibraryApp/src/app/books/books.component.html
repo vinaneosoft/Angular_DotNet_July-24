@@ -1,0 +1,36 @@
+<h4>BOOK DETAILS</h4>
+<table class="table table-hover">
+    <thead><tr>
+        <th>ID</th> <th>NAME</th> <th>DESCRIPTION</th> <th>PRICE</th> <th>AUTHOR</th> <th>PUBLISHED DATE</th>
+    </tr></thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.bookName}}</td>
+            <td>{{book.bookDescription}}</td>
+            <td>{{book.bookPrice}}</td>
+            <td>{{book.bookAuthor}}</td>
+            <td>{{book.bookPublishDate}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<div class="d-flex flex-wrap">
+    <div class="card" style="width: 18rem;" *ngFor="let book of books">
+        <h5 class="card-title">{{book.id}}</h5>
+        <img [src]="book.bookImage" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{book.bookName}}</h5>
+          <p class="card-text">{{book.bookDescription}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{book.bookPrice | currency}}</li>
+          <li class="list-group-item"><i><small>Author: </small></i>{{book.bookAuthor}}</li>
+          <li class="list-group-item"><i><small>Published on </small></i> {{book.bookPublishDate}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">EDIT</a>
+          <a href="#" class="card-link">DELETE</a>
+        </div>
+      </div>
+</div>

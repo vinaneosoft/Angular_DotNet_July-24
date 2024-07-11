@@ -11,6 +11,11 @@ export class LearningComponent {
     addResult=0;
     age=0;
 
+    student={
+      div:'',
+      perc:60
+    }
+
     bookNames=[
       'Learn Java in Easy way', 
       'Basics of Java', 

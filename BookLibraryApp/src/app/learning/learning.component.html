@@ -88,3 +88,25 @@
         </tbody>
      </table>
 </div>
+<div>
+    <h6>Students from division</h6>
+    <input placeholder="Enter division" [(ngModel)]="student.div">
+    <table [ngSwitch]="student.div">
+        <tr *ngSwitchCase="'A'"><td>Mohan</td></tr>
+        <tr  *ngSwitchCase="'B'"><td>Kapil</td></tr>
+        <tr *ngSwitchCase="'C'"><td>Heena</td></tr>
+        <tr *ngSwitchCase="'B'"><td>Krupa</td></tr>
+        <tr  *ngSwitchCase="'A'"><td>Shanti</td></tr>
+        <tr *ngSwitchCase="'D'"><td>Soham</td></tr>
+        <tr *ngSwitchDefault><td *ngIf="student.div!=''" >NO STUDENT</td></tr>
+    </table>
+    <h6>Students Grade</h6>
+    <b>{{student.perc}}%</b>
+    <section [ngSwitch]="true">
+        <div *ngSwitchCase="student.perc<=100 && student.perc>=70">DISTINCTION</div>
+        <div  *ngSwitchCase="student.perc<70 && student.perc>=60">FIRST CLASS</div>
+        <div *ngSwitchCase="student.perc<60 && student.perc>=40">PASS</div>
+        <div *ngSwitchCase="student.perc<40 && student.perc>=0">FAIL</div>
+        <div *ngSwitchDefault>WRONG INPUT</div>
+    </section>
+</div>
