@@ -10,6 +10,7 @@ import { LearningComponent } from './learning/learning.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { BooksComponent } from './books/books.component';
+import { BookcardComponent } from './bookcard/bookcard.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BooksComponent } from './books/books.component';
     NavbarComponent,
     LearningComponent,
     LoginComponent,
-    BooksComponent
+    BooksComponent,
+    BookcardComponent
   ],
   imports: [
     BrowserModule,

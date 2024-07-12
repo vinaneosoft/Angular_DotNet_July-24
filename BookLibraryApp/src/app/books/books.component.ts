@@ -8,9 +8,7 @@ import { TechnicalBook } from '../myclasses/technical-book';
 })
 export class BooksComponent {
 
-  cardStyle={
-    width:"300px"
-  }
+ 
 
   tableDesignclasses=["table-info" ,"table", "table-hover" ]
 

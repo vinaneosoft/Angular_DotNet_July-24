@@ -1,0 +1,3 @@
+Design Separate Entity card component
+Share data from parent to ur card
+card must be displayed for every entity coming from array

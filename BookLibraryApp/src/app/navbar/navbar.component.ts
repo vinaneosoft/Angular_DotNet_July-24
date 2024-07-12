@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
   @Input()
   mainHeadingAtChild="";
 
@@ -14,12 +15,12 @@ export class NavbarComponent {
   @Output()  //2.
   eventEmitter=new EventEmitter<string>();
 
-/*   constructor(){
+   /* constructor(){
     this.shareData(); // constructor does not have ability to emit events
-  } */
+  }  */
   ngOnInit(){ // automatically called when componet object gets created 
       this.shareData();
-  }
+  } 
   shareData(){
     this.eventEmitter.emit(this.subHeading); //3.
   }
