@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +6,21 @@ import { Component, Input } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  @Input()   // 1.
+  @Input()
   mainHeadingAtChild="";
+
+  subHeading="tech books"  //1.
+
+  @Output()  //2.
+  eventEmitter=new EventEmitter<string>();
+
+/*   constructor(){
+    this.shareData(); // constructor does not have ability to emit events
+  } */
+  ngOnInit(){ // automatically called when componet object gets created 
+      this.shareData();
+  }
+  shareData(){
+    this.eventEmitter.emit(this.subHeading); //3.
+  }
 }

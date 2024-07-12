@@ -1,4 +1,4 @@
 <header class="p-3 bg-secondary border border-2">
-    <h1 class="heading text-center">{{mainHeading}}</h1>
-    <app-navbar [mainHeadingAtChild]=mainHeading></app-navbar>  <!--2. custom data binding-->
+    <h1 class="heading text-center">{{mainHeading}}<small [ngStyle]="{fontSize:'13px'}">{{subHeadingAtParent}}</small></h1>
+    <app-navbar [mainHeadingAtChild]=mainHeading   (eventEmitter)="subHeadingAtParent=$event"></app-navbar>  <!--2. custom data binding 4.-->
 </header>

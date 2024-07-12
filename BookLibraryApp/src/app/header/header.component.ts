@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   mainHeading="VINA'S BOOK LIBRARY";
+  subHeadingAtParent="";
+  constructor(){
+    setTimeout(()=>{
+      this.mainHeading="VINA's TECHNICAL BOOKS"
+    }, 5000);
+  }
 }
