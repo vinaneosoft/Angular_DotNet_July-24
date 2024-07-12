@@ -9,7 +9,7 @@
             <td>{{book.bookName}}</td>
             <td>{{book.bookDescription}}</td>
             <td>{{book.bookPrice}}</td>
-            <td>{{book.bookAuthor}}</td>
+            <td>{{book.bookAuthor | slice:0: book.bookAuthor.indexOf(" ")}}</td>
             <td>{{book.bookPublishDate}}</td>
         </tr>
     </tbody>

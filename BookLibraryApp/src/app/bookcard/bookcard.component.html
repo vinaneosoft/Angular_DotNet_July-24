@@ -4,12 +4,12 @@
     <h5 class="card-title">{{book.id}}</h5>
     <img [src]="book.bookImage" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title" [ngStyle]="{color:'darkred'}">{{book.bookName}}</h5>
-      <p class="card-text">{{book.bookDescription}}</p>
+      <h5 class="card-title" [ngStyle]="{color:'darkred'}">{{book.bookName | uppercase}}</h5>
+      <p class="card-text">{{book.bookDescription | lowercase}}</p>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">{{book.bookPrice | currency}}</li>
-      <li class="list-group-item"><i><small>written by </small></i>{{book.bookAuthor}}</li>
+      <li class="list-group-item"><i><small>written by </small></i>{{book.bookAuthor | titlecase}}</li>
       <li class="list-group-item"><i><small>Published on </small></i> {{book.bookPublishDate}}</li>
     </ul>
     <div class="card-body">
