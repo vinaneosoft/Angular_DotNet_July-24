@@ -1,7 +1,13 @@
 <h4>BOOK DETAILS</h4>
+<div [ngClass]="cardDesign">
+      <app-bookcard *ngFor="let book of books" [book]="book"></app-bookcard>
+</div>
+<hr>
 <table [ngClass]="tableDesignclasses">
     <thead><tr>
-        <th>ID</th> <th>NAME</th> <th>DESCRIPTION</th> <th>PRICE</th> <th>AUTHOR</th> <th>PUBLISHED DATE</th>
+        <th>ID</th> <th>NAME</th> <th>DESCRIPTION</th> <th>PRICE</th>
+        <th>PRICE</th><th>PRICE</th><th>PRICE</th> <th>PRICE</th>
+         <th>AUTHOR</th> <th>PUBLISHED DATE</th>
     </tr></thead>
     <tbody>
         <tr *ngFor="let book of books">
@@ -9,13 +15,12 @@
             <td>{{book.bookName}}</td>
             <td>{{book.bookDescription}}</td>
             <td>{{book.bookPrice}}</td>
-            <td>{{book.bookAuthor | slice:0: book.bookAuthor.indexOf(" ")}}</td>
+            <td>{{book.bookPrice | number}}</td>
+            <td>{{book.bookPrice | number : '.2'}}</td> <!-- lower limit=2, hight limit =3-->
+            <td>{{book.bookPrice | number : '.1-1'}}
+                <td>{{book.bookPrice | number : '7.1-1'}}
+            <td>{{book.bookAuthor | slice:0: book.bookAuthor.indexOf(" ") | uppercase}}</td>
             <td>{{book.bookPublishDate}}</td>
         </tr>
     </tbody>
 </table>
-<hr>
-
-<div [ngClass]="cardDesign">
-      <app-bookcard *ngFor="let book of books" [book]="book"></app-bookcard>
-</div>
