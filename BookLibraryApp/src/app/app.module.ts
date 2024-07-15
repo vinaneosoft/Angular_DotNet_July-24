@@ -13,7 +13,6 @@ import { BooksComponent } from './books/books.component';
 import { BookcardComponent } from './bookcard/bookcard.component';
 import { YearsPipe } from './mypipes/years.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,
