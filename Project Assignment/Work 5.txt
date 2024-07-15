@@ -1,0 +1,3 @@
+Apply pipes on data,
+create Home component for ur mini project also
+Add routing ur mini project also
