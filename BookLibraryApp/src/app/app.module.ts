@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { BooksComponent } from './books/books.component';
 import { BookcardComponent } from './bookcard/bookcard.component';
+import { YearsPipe } from './mypipes/years.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BookcardComponent } from './bookcard/bookcard.component';
     LearningComponent,
     LoginComponent,
     BooksComponent,
-    BookcardComponent
+    BookcardComponent,
+    YearsPipe
   ],
   imports: [
     BrowserModule,

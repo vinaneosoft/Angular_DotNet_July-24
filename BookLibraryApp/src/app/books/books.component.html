@@ -6,7 +6,6 @@
 <table [ngClass]="tableDesignclasses">
     <thead><tr>
         <th>ID</th> <th>NAME</th> <th>DESCRIPTION</th> <th>PRICE</th>
-        <th>PRICE</th><th>PRICE</th><th>PRICE</th> <th>PRICE</th>
          <th>AUTHOR</th> <th>PUBLISHED DATE</th>
     </tr></thead>
     <tbody>
@@ -14,13 +13,57 @@
             <td>{{book.id}}</td>
             <td>{{book.bookName}}</td>
             <td>{{book.bookDescription}}</td>
-            <td>{{book.bookPrice}}</td>
-            <td>{{book.bookPrice | number}}</td>
-            <td>{{book.bookPrice | number : '.2'}}</td> <!-- lower limit=2, hight limit =3-->
-            <td>{{book.bookPrice | number : '.1-1'}}
-                <td>{{book.bookPrice | number : '7.1-1'}}
+            <td>{{book.bookPrice }}</td>
             <td>{{book.bookAuthor | slice:0: book.bookAuthor.indexOf(" ") | uppercase}}</td>
             <td>{{book.bookPublishDate}}</td>
         </tr>
     </tbody>
 </table>
+<table [ngClass]="tableDesignclasses">
+    <thead><tr>
+        <th>PRICE</th> <th>PRICE</th><th>PRICE</th>
+        <th>PRICE</th><th>PRICE</th><th>PRICE</th> <th>PRICE</th> <th>PRICE</th><th>PRICE</th>
+    </tr></thead>
+    <tbody>
+        <tr *ngFor="let book of books">       
+            <td>{{book.bookPrice}}</td>
+            <td>{{book.bookPrice | number}}</td>
+            <td>{{book.bookPrice | number : '.2'}}</td> <!-- lower limit=2, hight limit =3-->
+            <td>{{book.bookPrice | number : '.1-1'}}
+            <td>{{book.bookPrice | number : '7.1-1'}}
+            <td>{{book.bookPrice | currency}}</td> <!-- $, thousand sep, limit : 2-2-->
+            <td>{{book.bookPrice | currency : 'INR' }}</td> <!-- code -> symbol-->
+            <td>{{book.bookPrice | currency : 'INR': 'code'}}</td> <!-- code -> code-->  <!-- symbol code, symbo-narrow-->
+            <td>{{book.bookPrice | currency : 'INR': 'code' :'.0-0'}}</td>
+        </tr>
+    </tbody>
+</table>
+<table [ngClass]="tableDesignclasses">
+    <!-- <thead><tr>
+         <th>PUBLISHED DATE</th>  <th>PUBLISHED DATE</th>  <th>PUBLISHED DATE</th>
+    </tr></thead> -->
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.bookPublishDate}}</td>
+            <td>{{book.bookPublishDate | date}}</td> <!-- medium date-->
+            <td>{{book.bookPublishDate | date: 'shortDate'}}</td>
+            <td>{{book.bookPublishDate | date : 'EEEE, MMMM, dd yyyy : W'}}</td>
+            <!-- put all parameteres of date and check the output-->
+            <td>{{book.bookPublishDate | years}}</td>
+        </tr>
+    </tbody>
+</table>
+<table [ngClass]="tableDesignclasses">
+    <!-- <thead><tr>
+         <th>PUBLISHED DATE</th>  <th>PUBLISHED DATE</th>  <th>PUBLISHED DATE</th>
+    </tr></thead> -->
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.bookPublishDate}}</td>
+            <td>{{book.bookPublishDate | years : 'y' }} <span>years done</span></td> <!-- d, m, y : default-->
+        </tr>
+    </tbody>
+</table>
+<p>
+    {{sysDate |date :'cccc : W'}}
+</p>
