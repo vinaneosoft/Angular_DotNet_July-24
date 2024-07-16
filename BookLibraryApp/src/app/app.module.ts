@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LearningComponent } from './learning/learning.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { BooksComponent } from './books/books.component';
 import { BookcardComponent } from './bookcard/bookcard.component';
@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
 import { JavaBooksComponent } from './java-books/java-books.component';
 import { PythonBooksComponent } from './python-books/python-books.component';
+import { BookInputComponent } from './book-input/book-input.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,12 @@ import { PythonBooksComponent } from './python-books/python-books.component';
     HomeComponent,
     ViewNotFoundComponent,
     JavaBooksComponent,
-    PythonBooksComponent
+    PythonBooksComponent,
+    BookInputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

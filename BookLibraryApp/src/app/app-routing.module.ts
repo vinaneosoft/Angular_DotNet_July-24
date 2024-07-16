@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
 import { JavaBooksComponent } from './java-books/java-books.component';
 import { PythonBooksComponent } from './python-books/python-books.component';
+import { BookInputComponent } from './book-input/book-input.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,7 @@ const routes: Routes = [
         {
           path:'pythoninfo',
           component:PythonBooksComponent
-        },
+        }
     ] 
   },
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'techbooks',
     component:BooksComponent
+  },
+  {
+    path:"addbook",
+    component:BookInputComponent
   },
   {
     path:"**",
