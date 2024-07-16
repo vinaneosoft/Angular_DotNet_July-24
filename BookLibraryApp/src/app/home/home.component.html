@@ -1,0 +1,44 @@
+
+<div class="jumbotron">
+    <h3 class="display-4 text-success">Hello, Readers!</h3>
+    <p class="lead">Science fiction is a form of fiction that deals principally with the impact of actual or imagined science upon society or individuals.</p>
+    <hr class="my-4">
+    <p>Science fiction is a modern genre. Though writers in antiquity sometimes dealt with themes common to modern science fiction, their stories made no attempt at scientific and technological plausibility, the feature that distinguishes science fiction from earlier speculative writings and other contemporary speculative genres such as fantasy and horror</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+ 
+<div class="row">
+    <div class="col-6 offset-3">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img class="d-block w-100" src="Images/B1.jpg" alt="First slide" height="300px" width="200px">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" src="Images/B2.jpg" alt="First slide" height="300px" width="200px">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" src="Images/B3.jpg" alt="First slide" height="300px" width="200px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>
+<div>
+    <nav class="d-flex">
+        <a routerLink="javainfo">JAVA BOOKS INFO</a>  
+        <a routerLink="pythoninfo">PYTHON BOOKS INFO</a>
+    </nav>
+    <h6>Below section is for Dynamic View in HomeComponent</h6>
+    <router-outlet></router-outlet>
+</div>

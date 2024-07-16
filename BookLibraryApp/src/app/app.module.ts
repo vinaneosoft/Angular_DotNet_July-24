@@ -12,6 +12,10 @@ import { LoginComponent } from './login/login.component';
 import { BooksComponent } from './books/books.component';
 import { BookcardComponent } from './bookcard/bookcard.component';
 import { YearsPipe } from './mypipes/years.pipe';
+import { HomeComponent } from './home/home.component';
+import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
+import { JavaBooksComponent } from './java-books/java-books.component';
+import { PythonBooksComponent } from './python-books/python-books.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { YearsPipe } from './mypipes/years.pipe';
     LoginComponent,
     BooksComponent,
     BookcardComponent,
-    YearsPipe
+    YearsPipe,
+    HomeComponent,
+    ViewNotFoundComponent,
+    JavaBooksComponent,
+    PythonBooksComponent
   ],
   imports: [
     BrowserModule,

@@ -2,9 +2,32 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { BooksComponent } from './books/books.component';
+import { HomeComponent } from './home/home.component';
+import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
+import { JavaBooksComponent } from './java-books/java-books.component';
+import { PythonBooksComponent } from './python-books/python-books.component';
 
 
 const routes: Routes = [
+  {
+    path:'', 
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  {
+    path:'home', //userdefined path small letters, dont use space
+    component:HomeComponent,
+    children:[
+        {
+          path:'javainfo',
+          component:JavaBooksComponent
+        },
+        {
+          path:'pythoninfo',
+          component:PythonBooksComponent
+        },
+    ] 
+  },
   {
     path:'login',
     component:LoginComponent
@@ -12,6 +35,10 @@ const routes: Routes = [
   {
     path:'techbooks',
     component:BooksComponent
+  },
+  {
+    path:"**",
+    component:ViewNotFoundComponent
   }
 ];
 
@@ -20,3 +47,5 @@ const routes: Routes = [
   exports: [RouterModule] // to use it in root module : AppModule
 })
 export class AppRoutingModule { }
+
+
