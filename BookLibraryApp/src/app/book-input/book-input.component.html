@@ -1,36 +1,41 @@
 <div>
 
-<form>
+<form [formGroup]="bookInputForm" (submit)="collectData()">
     <div class="row justify-content-center  bg-success py-4">
         <div class="w-50">
             <h5 class="row justify-content-center text-light">BOOK INPUT FORM</h5>
             <div class="form-group">
                 <label for="id">Book Id</label>
-                <input type="text" class="form-control" id="id" placeholder="Enter Book Id">
+                <input type="text" class="form-control" id="id" formControlName="id">
             </div>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Book Name">
+                <input type="text" class="form-control" id="name" formControlName="bookName">
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" class="form-control" id="price" placeholder="Price">
+                <input type="number" class="form-control" id="price" formControlName="bookPrice">
             </div>
             <div class="form-group">
-                <label for="confirmedPrice">Confirmed Price</label>
-                <input type="number" class="form-control" id="confirmedPrice" placeholder="Confirmed Price">
+                <label for="confirmedPrice">Confirm Price</label>
+                <input type="number" class="form-control" id="confirmedPrice" formControlName="bookConfirmPrice">
             </div>
             <div class="form-group">
                 <label for="shortDescription">Short Description</label>
-                <input type="text" class="form-control" id="shortDescription" placeholder="Short Description">
+                <input type="text" class="form-control" id="shortDescription" formControlName="bookDescription">
             </div>
             <div class="form-group">
                 <label for="author">Author</label>
-                <input type="text" class="form-control" id="author" placeholder="Author">
+                <input type="text" class="form-control" id="author" formControlName="bookAuthor">
             </div>
             <div class="form-group">
                 <label for="publishdate">Publish date</label>
-                <input type="datetime-local" class="form-control" id="publishdate" placeholder="Publish date">
+                <input type="datetime-local" class="form-control" id="publishdate" formControlName="bookPublishDate">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="bimage">Upload Image</label>
+                <input type="file" class="form-control" id="bimage" formControlName="bookImage">
             </div>
             <br>
             <div class="d-flex justify-content-center">

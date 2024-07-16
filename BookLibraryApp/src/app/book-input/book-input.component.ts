@@ -22,4 +22,13 @@ export class BookInputComponent {
       bookConfirmPrice:new FormControl("")
     });
   }
+  collectData(){
+   // console.log(this.bookInputForm);
+   //console.log(this.bookInputForm.controls); // to get all form controls
+   //console.log(this.bookInputForm.get("id")); // to get individual form control
+  // console.log(this.bookInputForm.value.id="45");
+  // console.log(this.bookInputForm.value.bookName="Java");
+   console.log(this.bookInputForm.value);
+   
+  }
 }
