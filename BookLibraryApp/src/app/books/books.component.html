@@ -9,7 +9,7 @@
          <th>AUTHOR</th> <th>PUBLISHED DATE</th>
     </tr></thead>
     <tbody>
-        <tr *ngFor="let book of books | orderby:'asc' : 'bookPublishDate'">
+        <tr *ngFor="let book of books | orderby:'asc' : 'id'">
             <td>{{book.id}}</td>
             <td>{{book.bookName}}</td>
             <td>{{book.bookDescription}}</td>
