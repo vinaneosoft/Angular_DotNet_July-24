@@ -17,6 +17,7 @@ import { ViewNotFoundComponent } from './view-not-found/view-not-found.component
 import { JavaBooksComponent } from './java-books/java-books.component';
 import { PythonBooksComponent } from './python-books/python-books.component';
 import { BookInputComponent } from './book-input/book-input.component';
+import { OrderbyPipe } from './mypipes/orderby.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BookInputComponent } from './book-input/book-input.component';
     ViewNotFoundComponent,
     JavaBooksComponent,
     PythonBooksComponent,
-    BookInputComponent
+    BookInputComponent,
+    OrderbyPipe
   ],
   imports: [
     BrowserModule,

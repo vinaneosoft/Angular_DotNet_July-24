@@ -9,12 +9,12 @@
          <th>AUTHOR</th> <th>PUBLISHED DATE</th>
     </tr></thead>
     <tbody>
-        <tr *ngFor="let book of books">
+        <tr *ngFor="let book of books | orderby:'asc' : 'bookPublishDate'">
             <td>{{book.id}}</td>
             <td>{{book.bookName}}</td>
             <td>{{book.bookDescription}}</td>
             <td>{{book.bookPrice }}</td>
-            <td>{{book.bookAuthor | slice:0: book.bookAuthor.indexOf(" ") | uppercase}}</td>
+            <td>{{book.bookAuthor }}</td>
             <td>{{book.bookPublishDate}}</td>
         </tr>
     </tbody>
