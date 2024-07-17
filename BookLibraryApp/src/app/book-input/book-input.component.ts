@@ -22,9 +22,30 @@ export class BookInputComponent {
       bookConfirmPrice:new FormControl("", [Validators.required])
     });
   }
-
+/* to easily access formcontrol object on html page */
   get id(){
     return this.bookInputForm.get("id");
+  }
+  get bookName(){
+    return this.bookInputForm.get("bookName");
+  }
+  get bookAuthor(){
+    return this.bookInputForm.get("bookAuthor");
+  }
+  get bookPrice(){
+    return this.bookInputForm.get("bookPrice");
+  }
+  get bookPublishDate(){
+    return this.bookInputForm.get("bookPublishDate");
+  }
+  get bookDescription(){
+    return this.bookInputForm.get("bookDescription");
+  }
+  get bookImage(){
+    return this.bookInputForm.get("bookImage");
+  }
+  get bookConfirmPrice(){
+    return this.bookInputForm.get("bookConfirmPrice");
   }
 
   collectData(){

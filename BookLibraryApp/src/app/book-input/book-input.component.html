@@ -8,8 +8,8 @@
                 <label for="id">Book Id</label>
                 <input type="text" class="form-control" id="id" formControlName="id" >
             </div>
-            <div *ngIf="id!.touched">
-                <b *ngIf="id!.hasError('required')"><small>Id is required</small></b>
+            <div *ngIf="id!.touched" class="text-danger">
+                <b *ngIf="id!.hasError('required')"><small>id is required</small></b>
                 <b></b>
                 <b></b>
             </div>
@@ -17,25 +17,55 @@
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" formControlName="bookName">
             </div>
+            <div *ngIf="bookName!.touched" class="text-danger">
+                <b *ngIf="bookName!.hasError('required')"><small>name is required</small></b>
+                <b></b>
+                <b></b>
+            </div>
             <div class="form-group">
                 <label for="price">Price</label>
                 <input type="number" class="form-control" id="price" formControlName="bookPrice">
+            </div>
+            <div *ngIf="bookPrice!.touched" class="text-danger">
+                <b *ngIf="bookPrice!.hasError('required')"><small>price is required</small></b>
+                <b></b>
+                <b></b>
             </div>
             <div class="form-group">
                 <label for="confirmedPrice">Confirm Price</label>
                 <input type="number" class="form-control" id="confirmedPrice" formControlName="bookConfirmPrice">
             </div>
+            <div *ngIf="bookConfirmPrice!.touched" class="text-danger">
+                <b *ngIf="bookConfirmPrice!.hasError('required')"><small>price  confirmation is required</small></b>
+                <b></b>
+                <b></b>
+            </div>
             <div class="form-group">
                 <label for="shortDescription">Short Description</label>
                 <input type="text" class="form-control" id="shortDescription" formControlName="bookDescription">
+            </div>
+            <div *ngIf="bookDescription!.touched" class="text-danger"> 
+                <b *ngIf="bookDescription!.hasError('required')"><small>short description is required</small></b>
+                <b></b>
+                <b></b>
             </div>
             <div class="form-group">
                 <label for="author">Author</label>
                 <input type="text" class="form-control" id="author" formControlName="bookAuthor">
             </div>
+            <div *ngIf="bookAuthor!.touched" class="text-danger" >
+                <b *ngIf="bookAuthor!.hasError('required')"><small>author is required</small></b>
+                <b></b>
+                <b></b>
+            </div>
             <div class="form-group">
                 <label for="publishdate">Publish date</label>
                 <input type="datetime-local" class="form-control" id="publishdate" formControlName="bookPublishDate">
+            </div>
+            <div *ngIf="bookPublishDate!.touched" class="text-danger">
+                <b *ngIf="bookPublishDate!.hasError('required')"><small>published date is required</small></b>
+                <b></b>
+                <b></b>
             </div>
             <br>
             <div class="form-group">
