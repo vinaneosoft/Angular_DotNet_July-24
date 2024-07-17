@@ -10,12 +10,13 @@ import { TechnicalBook } from '../myclasses/technical-book';
 export class BookInputComponent {
   bookInputForm:FormGroup;
   book=new TechnicalBook();
+  bookNameMinLength=3
   constructor(){
     this.bookInputForm=new FormGroup({
       id:new FormControl("", [Validators.required]),
-      bookName:new FormControl("", [Validators.required]),
+      bookName:new FormControl("", [Validators.required, Validators.minLength(this.bookNameMinLength)]),
       bookAuthor:new FormControl("",[Validators.required]),
-      bookPrice:new FormControl("", [Validators.required]),
+      bookPrice:new FormControl("", [Validators.required, Validators.min(0)]),
       bookPublishDate:new FormControl("", [Validators.required]),
       bookDescription:new FormControl("", [Validators.required]),
       bookImage:new FormControl("",[]),

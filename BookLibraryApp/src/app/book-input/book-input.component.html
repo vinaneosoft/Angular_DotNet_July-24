@@ -10,17 +10,14 @@
             </div>
             <div *ngIf="id!.touched" class="text-danger">
                 <b *ngIf="id!.hasError('required')"><small>id is required</small></b>
-                <b></b>
-                <b></b>
             </div>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" formControlName="bookName">
             </div>
-            <div *ngIf="bookName!.touched" class="text-danger">
+            <div *ngIf="bookName!.touched && bookName!.dirty" class="text-danger">
                 <b *ngIf="bookName!.hasError('required')"><small>name is required</small></b>
-                <b></b>
-                <b></b>
+                <b *ngIf="bookName!.hasError('minlength')"><small>name must contain atleast {{bookNameMinLength}} characters</small></b>
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
@@ -28,8 +25,7 @@
             </div>
             <div *ngIf="bookPrice!.touched" class="text-danger">
                 <b *ngIf="bookPrice!.hasError('required')"><small>price is required</small></b>
-                <b></b>
-                <b></b>
+                <b *ngIf="bookPrice!.hasError('min')"><small>Please enter valid price</small></b>
             </div>
             <div class="form-group">
                 <label for="confirmedPrice">Confirm Price</label>
