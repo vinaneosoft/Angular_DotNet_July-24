@@ -6,7 +6,7 @@ input.ng-invalid{
     border : 1px solid red
 }
 input.ng-touched{
-    background-color: cornflowerblue;
+    background-color: lightblue;
 }
 form{
     background-color: antiquewhite;

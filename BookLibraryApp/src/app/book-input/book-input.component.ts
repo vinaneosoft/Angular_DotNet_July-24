@@ -23,7 +23,7 @@ export class BookInputComponent {
       bookDescription:new FormControl("", [Validators.required, ]),
       bookImage:new FormControl(""),
       bookConfirmPrice:new FormControl("", [Validators.required, /*custom validator for formcontrol*/])
-    },/*custom validator for formgroup*/   CustomValidators.valueMatch);
+    },/*custom validator for formgroup*/   CustomValidators.valueMatch); /*match*/
   }
 /* to easily access formcontrol object on html page */
   get id(){
