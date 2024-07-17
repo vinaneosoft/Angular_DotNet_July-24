@@ -8,6 +8,11 @@
                 <label for="id">Book Id</label>
                 <input type="text" class="form-control" id="id" formControlName="id" >
             </div>
+            <div *ngIf="id!.touched">
+                <b *ngIf="id!.hasError('required')"><small>Id is required</small></b>
+                <b></b>
+                <b></b>
+            </div>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" formControlName="bookName">

@@ -8,9 +8,7 @@ import { TechnicalBook } from '../myclasses/technical-book';
   styleUrl: './book-input.component.css'
 })
 export class BookInputComponent {
-
   bookInputForm:FormGroup;
-
   book=new TechnicalBook();
   constructor(){
     this.bookInputForm=new FormGroup({
@@ -24,6 +22,11 @@ export class BookInputComponent {
       bookConfirmPrice:new FormControl("", [Validators.required])
     });
   }
+
+  get id(){
+    return this.bookInputForm.get("id");
+  }
+
   collectData(){
    // console.log(this.bookInputForm);
    //console.log(this.bookInputForm.controls); // to get all form controls

@@ -5,6 +5,9 @@ input.ng-valid{
 input.ng-invalid{
     border : 1px solid red
 }
+input.ng-touched{
+    background-color: cornflowerblue;
+}
 form{
     background-color: antiquewhite;
 }
