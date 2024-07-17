@@ -15,7 +15,7 @@
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" formControlName="bookName">
             </div>
-            <div *ngIf="bookName!.touched && bookName!.dirty" class="text-danger">
+            <div *ngIf="bookName!.touched" class="text-danger">
                 <b *ngIf="bookName!.hasError('required')"><small>name is required</small></b>
                 <b *ngIf="bookName!.hasError('minlength')"><small>name must contain atleast {{bookNameMinLength}} characters</small></b>
             </div>
@@ -51,8 +51,7 @@
             </div>
             <div *ngIf="bookAuthor!.touched" class="text-danger" >
                 <b *ngIf="bookAuthor!.hasError('required')"><small>author is required</small></b>
-                <b></b>
-                <b></b>
+                <b *ngIf="bookAuthor!.hasError('pattern')"><small>2 to 60 characters allowed</small></b>
             </div>
             <div class="form-group">
                 <label for="publishdate">Publish date</label>

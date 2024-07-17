@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TechnicalBook } from '../myclasses/technical-book';
+import { CustomValidators } from '../myclasses/custom-validators';
 
 @Component({
   selector: 'app-book-input',
@@ -10,18 +11,19 @@ import { TechnicalBook } from '../myclasses/technical-book';
 export class BookInputComponent {
   bookInputForm:FormGroup;
   book=new TechnicalBook();
-  bookNameMinLength=3
+  bookNameMinLength=3;
+  authorPattern="[A-Za-z ]{2,60}"
   constructor(){
     this.bookInputForm=new FormGroup({
       id:new FormControl("", [Validators.required]),
       bookName:new FormControl("", [Validators.required, Validators.minLength(this.bookNameMinLength)]),
-      bookAuthor:new FormControl("",[Validators.required]),
-      bookPrice:new FormControl("", [Validators.required, Validators.min(0)]),
+      bookAuthor:new FormControl("",[Validators.required,Validators.pattern(this.authorPattern)]),
+      bookPrice:new FormControl("", [Validators.required, Validators.min(0), ]),
       bookPublishDate:new FormControl("", [Validators.required]),
-      bookDescription:new FormControl("", [Validators.required]),
-      bookImage:new FormControl("",[]),
-      bookConfirmPrice:new FormControl("", [Validators.required])
-    });
+      bookDescription:new FormControl("", [Validators.required, ]),
+      bookImage:new FormControl(""),
+      bookConfirmPrice:new FormControl("", [Validators.required, /*custom validator for formcontrol*/])
+    },/*custom validator for formgroup*/   CustomValidators.valueMatch);
   }
 /* to easily access formcontrol object on html page */
   get id(){
